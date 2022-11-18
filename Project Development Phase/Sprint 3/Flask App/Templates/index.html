@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crude Oil Price Prediction</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <style>
+        input[type=text]{
+            width: 100%;
+            border: 2px solid #ffffff;
+            border-radius: 4px;
+            margin: 8px 0;
+            outline: none;
+            padding: 8px;
+            box-sizing: border-box;
+            transition: 3s;
+        }
+        input[type=text]:focus{
+            border-color:  rgba(19, 3, 99, 0.415);;
+            box-shadow: 0 0 8px 0  rgb(19,3,99,0.415);;
+        }
+    </style>
+</head>
+<body>
+    <header class="homepage" >
+        <div class="navbar">
+            <a href="#"><h1>Crude Oil<span>Price Prediction</span></h1></a>
+        </div>
+        <div class="Div">
+            <h1><span>Crude</span>oil<span>Price</span>Prediction</h1>
+            <p>
+                Demand for oil is inelastic, therefore the rise in price is good news for Producers because they will see an increase in their revenue.
+Oil importers, however,will experience increased cost of purchasing oil.Because oil is the largest traded commodity, the effects are quiet significant. A rising oil price can even shift economic/political power from oil importers to oil exporters. The Crude oil price movements or subject to diverse influencing factors.</p>
+            <form action="/predict" method="POST" enctype = "multipart/form-data">
+                <input type="text" name="val" placeholder="Enter the crude oil price for first 10 days" >
+                 <br> <br> <br>
+                <input type="submit" class="button-class" placeholder="Predict">
+            </form><br> <br>
+            <div>
+                <h4>Predicted price is: {{prediction}}</h4>
+                
+            </div>
+            
+            
+        
+           
+        </div>
+
+    </header>
+    
+</body>
+</html>
